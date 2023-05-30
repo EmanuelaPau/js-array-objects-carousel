@@ -7,11 +7,13 @@ main {
 div.page-wrapper {
     width: 1200px;
     margin: 0 auto;
+
+    position: relative;
 }
 
 div.carousel-container {
     margin: 0 auto;
-    background-color: brown;
+    /* background-color: brown; */
     width: 90%;
     height: 600px;
 }
@@ -19,4 +21,16 @@ div.carousel-container {
 .my_title {
     font-size: 3rem;
     font-weight: 700;
+}
+
+.carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    display: none;
+}
+
+.active {
+    display: block;
 }
