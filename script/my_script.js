@@ -101,7 +101,11 @@ rightCarouselButton.addEventListener('click', function () {
 })
 
 leftCarouselButton.addEventListener('click', function () {
-    activeIndex = activeIndex - 1;
+    if (activeIndex ===0) {
+        activeIndex = images.length - 1;
+    } else {
+        activeIndex = activeIndex - 1;
+    }
     // alert('ciao sinistro');
     document.querySelector('.carousel-img.active').classList.remove('active');
     document.querySelectorAll('.carousel-img')[activeIndex].classList.add('active')
