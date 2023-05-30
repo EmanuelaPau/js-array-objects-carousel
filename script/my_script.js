@@ -56,33 +56,45 @@ const images = [
     }
 ];
 
-// const carouselContainerDocument = document.querySelector('.carousel-container');
+const carouselContainerDocument = document.querySelector('.carousel-container');
 
-// carouselContainerDocument.innerHTML = `
-//     <!-- Button left  -->
-//     <button type="button" class="btn btn-light my_button-left"><i class="fa-solid fa-chevron-left"></i></button>    
+carouselContainerDocument.innerHTML = `
+    <!-- Button left  -->
+    <button type="button" class="btn btn-light my_button-left"><i class="fa-solid fa-chevron-left"></i></button>    
 
-//     <!-- Button right  -->
-//     <button type="button" class="btn btn-light my_button-right"><i class="fa-solid fa-chevron-right"></i></button>  
-// `;
+    <!-- Button right  -->
+    <button type="button" class="btn btn-light my_button-right"><i class="fa-solid fa-chevron-right"></i></button>  
+`;
 
-// images.forEach((element, index) => {
-//     carouselContainerDocument.innerHTML += `
-//     <!-- Carousel imgs  -->
-//     <img id="my-carousel-img-${index + 1}" class="carousel-img" src="${element.image}" alt="">
-//     `;
-// })
+images.forEach((element, index) => {
+    carouselContainerDocument.innerHTML += `
+    <!-- Text info   -->
+    <div class="carousel-module">
+        <div class="my_image-infos-container">
+            <h2 class="my_image-title" id="my_carousel-title-${index + 1}">
+                ${element.title}
+            </h2>
+            <p class="my_image-text" id="my_carousel-text-${index + 1}">
+                ${element.text}
+            </p>
+        </div>
 
-// const carouselImgsDocument = document.getElementById('my-carousel-img-1');
-// carouselImgsDocument.classList.add('active');
+        <!-- Carousel imgs  -->
+        <img id="my-carousel-img-${index + 1}" class="carousel-img" src="${element.image}" alt="">
+    </div>
+    `;
+})
 
-// const rightCarouselButton = document.querySelector('.my_button-right');
-// const leftCarouselButton = document.querySelector('.my_button-left');
+const carouselImgsDocument = document.getElementById('my-carousel-img-1');
+carouselImgsDocument.classList.add('active');
 
-// rightCarouselButton.addEventListener('click', function () {
-//     alert('ciao destro');
-// })
+const rightCarouselButton = document.querySelector('.my_button-right');
+const leftCarouselButton = document.querySelector('.my_button-left');
 
-// leftCarouselButton.addEventListener('click', function () {
-//     alert('ciao sinistro');
-// })
+rightCarouselButton.addEventListener('click', function () {
+    alert('ciao destro');
+})
+
+leftCarouselButton.addEventListener('click', function () {
+    alert('ciao sinistro');
+})

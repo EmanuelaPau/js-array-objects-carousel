@@ -19,6 +19,11 @@ div.carousel-container {
     position: relative;
 }
 
+.carousel-module {
+    width: 100%;
+    height: 100%;
+}
+
 .my_title {
     font-size: 3rem;
     font-weight: 700;
@@ -58,6 +63,7 @@ button.my_button-right {
     position: absolute;
     /* left: 20px; */
     bottom: 0;
+    display: none;
 }
 
 .my_image-title {
