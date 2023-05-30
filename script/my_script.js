@@ -85,19 +85,23 @@ images.forEach((element, index) => {
     `;
 })
 
-const carouselImgsDocument = document.getElementById('my-carousel-img-1');
-carouselImgsDocument.classList.add('active');
+const carouselImgsDocument = document.querySelectorAll('.carousel-img')[0].classList.add('active');
 
-const carouselTextBoxDocument = document.getElementById('my_carousel-info-1');
-carouselTextBoxDocument.classList.add('active');
+const carouselTextBoxDocument = document.querySelectorAll('.my_image-infos-container')[0].classList.add('active');
 
 const rightCarouselButton = document.querySelector('.my_button-right');
 const leftCarouselButton = document.querySelector('.my_button-left');
 
 rightCarouselButton.addEventListener('click', function () {
     alert('ciao destro');
+
 })
 
 leftCarouselButton.addEventListener('click', function () {
     alert('ciao sinistro');
 })
+
+function swithcImageRight(imageIndex) {
+    const carouselImgsDocument = document.getElementById(`my-carousel-img-${imageIndex}`);
+
+}
