@@ -17,7 +17,7 @@ div.carousel-container {
     position: relative;
 }
 
-.carousel-module {
+.carouselmodule {
     position: absolute;
     display: none;
 
@@ -111,7 +111,7 @@ button.my_button-right {
     /* background-color: red; */
 }
 
-.miniature-box {
+.miniaturebox {
     height: 100%;
     width: calc(100% / 5 - 10px);
     filter: grayscale(80%) blur(1px);
@@ -119,7 +119,7 @@ button.my_button-right {
     /* background-color: blue; */
 }
 
-.miniature-box img {
+.miniaturebox img {
     height: 100%;
     width: 100%;
     border-radius: 10px;
