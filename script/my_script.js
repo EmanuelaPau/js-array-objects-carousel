@@ -95,9 +95,14 @@ const rightCarouselButton = document.querySelector('.my_button-right');
 const leftCarouselButton = document.querySelector('.my_button-left');
 
 rightCarouselButton.addEventListener('click', function () {
+    if (activeIndex === images.length - 1) {
+        activeIndex = 0 ;
+    } else {
+        activeIndex = activeIndex + 1;
+    }
     // alert('ciao destro');
     document.querySelector('.carousel-img.active').classList.remove('active');
-
+    document.querySelectorAll('.carousel-img')[activeIndex].classList.add('active')
 })
 
 leftCarouselButton.addEventListener('click', function () {
