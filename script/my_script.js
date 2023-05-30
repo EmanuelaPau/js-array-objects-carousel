@@ -6,13 +6,6 @@ console.log('hello');
 // descrizione
 // Creare un carosello come nella foto allegata.
 
-//* Milestone 1: 
-
-// Al click dell'utente sulle frecce verso sinistra o destra, l'immagine attiva diventerà visibile e dovremo aggiungervi titolo e testo.
-
-//* Milestone 2:
-// Aggiungere il ciclo infinito del carosello. Ovvero se la miniatura attiva è la prima e l'utente clicca la freccia verso l'alto, la miniatura che deve attivarsi sarà l'ultima e viceversa per l'ultima miniatura se l'utente clicca la freccia verso il basso.
-
 //! BONUS 1:
 // Aggiungere le thumbnails (sottoforma di miniatura) ed al click attivare l’immagine corrispondente.
 
@@ -81,6 +74,7 @@ images.forEach((element, index) => {
             </p>
         </div>
 
+        <div class="carousel-black-multiplyer"></div>
         <!-- Carousel imgs  -->
         <img id="my-carousel-img-${index + 1}" class="carousel-img" src="${element.image}" alt="">
     </div>
