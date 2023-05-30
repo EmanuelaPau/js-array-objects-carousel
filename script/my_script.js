@@ -66,7 +66,7 @@ carouselContainerDocument.innerHTML = `
     <button type="button" class="btn btn-light my_button-right"><i class="fa-solid fa-chevron-right"></i></button>  
 `;
 
-let activeIndex = images.length;
+let activeIndex = 0;
 
 images.forEach((element, index) => {
     carouselContainerDocument.innerHTML += `
@@ -87,36 +87,34 @@ images.forEach((element, index) => {
     `;
 })
 
-const carouselImgsDocument = document.querySelectorAll('.carousel-img')[activeIndex - 1].classList.add('active');
-
-const carouselTextBoxDocument = document.querySelectorAll('.my_image-infos-container')[activeIndex - 1].classList.add('active');
+const carouselImgsContainerDocument = document.querySelectorAll('.carousel-module')[activeIndex].classList.add('active');
 
 const rightCarouselButton = document.querySelector('.my_button-right');
 const leftCarouselButton = document.querySelector('.my_button-left');
 
 rightCarouselButton.addEventListener('click', function () {
     if (activeIndex === images.length - 1) {
-        activeIndex = 0 ;
+        activeIndex = 0;
     } else {
         activeIndex = activeIndex + 1;
     }
     // alert('ciao destro');
-    document.querySelector('.carousel-img.active').classList.remove('active');
-    document.querySelectorAll('.carousel-img')[activeIndex].classList.add('active')
+    document.querySelector('.carousel-module.active').classList.remove('active');
+    document.querySelectorAll('.carousel-module')[activeIndex].classList.add('active')
 })
 
 leftCarouselButton.addEventListener('click', function () {
-    if (activeIndex ===0) {
+    if (activeIndex === 0) {
         activeIndex = images.length - 1;
     } else {
         activeIndex = activeIndex - 1;
     }
     // alert('ciao sinistro');
-    document.querySelector('.carousel-img.active').classList.remove('active');
-    document.querySelectorAll('.carousel-img')[activeIndex].classList.add('active')
+    document.querySelector('.carousel-module.active').classList.remove('active');
+    document.querySelectorAll('.carousel-module')[activeIndex].classList.add('active')
 })
 
-// function swithcImageLeft(imageIndex) {   
-//     // const carouselImgsDocument = document.getElementById(`my-carousel-img-${imageIndex}`);
-    
+// function swithcElementInCarousel(elementClass Index) {
+//     const carouselImgsDocument = document.getElementById(`my-carousel-img-${imageIndex}`);
+
 // }
