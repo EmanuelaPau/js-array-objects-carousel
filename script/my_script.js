@@ -89,6 +89,8 @@ const carouselImgsDocument = document.querySelectorAll('.carousel-img')[0].class
 
 const carouselTextBoxDocument = document.querySelectorAll('.my_image-infos-container')[0].classList.add('active');
 
+let activeIndex = 0;
+
 const rightCarouselButton = document.querySelector('.my_button-right');
 const leftCarouselButton = document.querySelector('.my_button-left');
 
