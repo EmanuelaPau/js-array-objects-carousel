@@ -69,5 +69,8 @@ carouselContainerDocument.innerHTML = `
 `;
 
 images.forEach((element) => {
-
+    carouselContainerDocument.innerHTML += `
+    <!-- Carousel imgs  -->
+    <img class="carousel-img active" src="${element.image}" alt="">
+    `;
 })
