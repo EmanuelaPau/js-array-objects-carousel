@@ -95,15 +95,16 @@ const rightCarouselButton = document.querySelector('.my_button-right');
 const leftCarouselButton = document.querySelector('.my_button-left');
 
 rightCarouselButton.addEventListener('click', function () {
-    alert('ciao destro');
+    // alert('ciao destro');
 
 })
 
 leftCarouselButton.addEventListener('click', function () {
-    alert('ciao sinistro');
+    // alert('ciao sinistro');
+    document.querySelector('.carousel-img.active').classList.remove('active')
 })
 
-function swithcImageRight(imageIndex) {
-    const carouselImgsDocument = document.getElementById(`my-carousel-img-${imageIndex}`);
-
-}
+// function swithcImageLeft(imageIndex) {
+//     // const carouselImgsDocument = document.getElementById(`my-carousel-img-${imageIndex}`);
+    
+// }
