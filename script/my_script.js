@@ -1,13 +1,4 @@
 console.log('hello');
-// Consegna:
-// Dato un array di oggetti letterali con:
-// url dell’immagine
-// titolo
-// descrizione
-// Creare un carosello come nella foto allegata.
-
-//! BONUS 2:
-// Aggiungere funzionalità di autoplay: dopo un certo periodo di tempo (3 secondi) l’immagine attiva dovrà cambiare alla successiva.
 
 //! BONUS 3:
 // Aggiungere bottoni di start/stop e di inversione del meccanismo di autoplay.
@@ -50,6 +41,13 @@ const carouselContainerDocument = document.querySelector('.carousel-container');
 const carouselMiniatureContainerDom = document.querySelector('.carousel-miniatures-container')
 
 carouselContainerDocument.innerHTML = `
+
+    <!-- Button play -->
+    <button type="button" class="btn btn-light my_button-play"><i class="fa-solid fa-play"></i></button> 
+    
+    <!-- Button stop -->
+    <button type="button" class="btn btn-light my_button-stop"><i class="fa-solid fa-pause"></i></button>   
+
     <!-- Button left  -->
     <button type="button" class="btn btn-light my_button-left"><i class="fa-solid fa-chevron-left"></i></button>    
 
@@ -138,20 +136,28 @@ function swithcElementInCarousel(elementClass, miniatureClass, activeClass, colo
 
 }
 
+let isTimerOn = true;
+
 setInterval(myTimer, 3000);
 
 function myTimer() {
-    if (activeIndex === images.length - 1) {
-        activeIndex = 0;
-    } else {
-        activeIndex = activeIndex + 1;
+    if (isTimerOn) {
+        if (activeIndex === images.length - 1) {
+            activeIndex = 0;
+        } else {
+            activeIndex = activeIndex + 1;
+        }
+        swithcElementInCarousel('carouselmodule', 'miniaturebox', 'active', 'color', activeIndex)
     }
-    // alert('ciao destro');
-    swithcElementInCarousel('carouselmodule', 'miniaturebox', 'active', 'color', activeIndex)
-    // const d = new Date();
-    // console.log(d.toLocaleTimeString());
 }
 
-// function myTimer() {
-//     swithcElementInCarousel('carouselmodule', 'miniaturebox', 'active', 'color', activeIndex);
-// } 
+const playButton = document.querySelector('.my_button-play');
+const pauseButton = document.querySelector('.my_button-stop');
+
+playButton.addEventListener('click', function () {
+    isTimerOn = true;
+})
+
+pauseButton.addEventListener('click', function () {
+    isTimerOn = false;
+})
