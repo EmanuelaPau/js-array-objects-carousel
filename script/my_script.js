@@ -7,7 +7,6 @@ console.log('hello');
 // Creare un carosello come nella foto allegata.
 
 //* Milestone 1: 
-// Ora rimuoviamo i contenuti statici e usiamo l’array di oggetti letterali per popolare dinamicamente il carosello.
 
 // Al click dell'utente sulle frecce verso sinistra o destra, l'immagine attiva diventerà visibile e dovremo aggiungervi titolo e testo.
 
@@ -76,3 +75,14 @@ images.forEach((element, index) => {
 
 const carouselImgsDocument = document.getElementById('my-carousel-img-1');
 carouselImgsDocument.classList.add('active');
+
+const rightCarouselButton = document.querySelector('.my_button-right');
+const leftCarouselButton = document.querySelector('.my_button-left');
+
+rightCarouselButton.addEventListener('click', function () {
+    alert('ciao destro');
+})
+
+leftCarouselButton.addEventListener('click', function () {
+    alert('ciao sinistro');
+})
