@@ -103,3 +103,29 @@ button.my_button-right {
 .active {
     display: block;
 }
+
+.carousel-miniatures-container {
+    margin: 10px auto 0;
+    width: 90%;
+    height: 120px;
+    /* background-color: red; */
+}
+
+.miniature-box {
+    height: 100%;
+    width: calc(100% / 5 - 20px);
+    filter: grayscale(70%);
+    /* background-color: blue; */
+}
+
+.miniature-box img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.color {
+    filter: grayscale(0);
+}

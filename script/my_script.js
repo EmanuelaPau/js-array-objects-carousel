@@ -50,6 +50,7 @@ const images = [
 ];
 
 const carouselContainerDocument = document.querySelector('.carousel-container');
+const carouselMiniatureContainerDom = document.querySelector('.carousel-miniatures-container')
 
 carouselContainerDocument.innerHTML = `
     <!-- Button left  -->
@@ -76,9 +77,15 @@ images.forEach((element, index) => {
 
         <div class="carousel-black-multiplyer"></div>
         <!-- Carousel imgs  -->
-        <img id="my-carousel-img-${index + 1}" class="carousel-img" src="${element.image}" alt="">
+        <img id="my-carousel-img-${index + 1}" class="carousel-img" src="${element.image}" alt="${element.title}">
     </div>
     `;
+
+    carouselMiniatureContainerDom.innerHTML += `
+    <div class="miniature-box card-link">
+        <img src="${element.image}" alt="${element.title}">
+    </div>
+    `
 })
 
 const carouselImgsContainerDocument = document.querySelectorAll('.carousel-module')[activeIndex].classList.add('active');
