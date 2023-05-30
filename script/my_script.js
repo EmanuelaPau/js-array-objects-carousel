@@ -58,7 +58,6 @@ const images = [
 ];
 
 const carouselContainerDocument = document.querySelector('.carousel-container');
-console.log(carouselContainerDocument);
 
 carouselContainerDocument.innerHTML = `
     <!-- Button left  -->
@@ -68,9 +67,12 @@ carouselContainerDocument.innerHTML = `
     <button type="button" class="btn btn-light my_button-right"><i class="fa-solid fa-chevron-right"></i></button>  
 `;
 
-images.forEach((element) => {
+images.forEach((element, index) => {
     carouselContainerDocument.innerHTML += `
     <!-- Carousel imgs  -->
-    <img class="carousel-img active" src="${element.image}" alt="">
+    <img id="my-carousel-img-${index + 1}" class="carousel-img" src="${element.image}" alt="">
     `;
 })
+
+const carouselImgsDocument = document.getElementById('my-carousel-img-1');
+carouselImgsDocument.classList.add('active');
