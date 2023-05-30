@@ -6,9 +6,6 @@ console.log('hello');
 // descrizione
 // Creare un carosello come nella foto allegata.
 
-//* Milestone 0:
-// Come nel primo carosello realizzato, focalizziamoci prima sulla creazione del markup statico: costruiamo il container e inseriamo l'immagine grande in modo da poter stilare lo slider.
-
 //* Milestone 1: 
 // Ora rimuoviamo i contenuti statici e usiamo l’array di oggetti letterali per popolare dinamicamente il carosello.
 
@@ -26,6 +23,15 @@ console.log('hello');
 //! BONUS 3:
 // Aggiungere bottoni di start/stop e di inversione del meccanismo di autoplay.
 
+//? CAROUSEL ELEMENTS 
+// <!-- Carousel imgs  -->
+// <img class="carousel-img" src="img/01.webp" alt="">
+
+// <!-- Button left  -->
+// <button type="button" class="btn btn-light my_button-left"><i class="fa-solid fa-chevron-left"></i></button>    
+
+// <!-- Button right  -->
+// <button type="button" class="btn btn-light my_button-right"><i class="fa-solid fa-chevron-right"></i></button>   
 
 const images = [
     {
@@ -50,3 +56,6 @@ const images = [
         text: "Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.",
     }
 ];
+
+const carouselContainerDocument = document.querySelector('.carousel-container');
+console.log(carouselCOntainerDocument);
