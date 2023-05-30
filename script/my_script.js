@@ -35,7 +35,7 @@ console.log('hello');
 const images = [
     {
         image: 'img/01.webp',
-        title: "Marvel\'s Spiderman Miles Morales",
+        title: "Marvel's Spiderman Miles Morales",
         text: 'Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.',
     }, {
         image: 'img/02.webp',
@@ -52,37 +52,37 @@ const images = [
     }, {
         image: 'img/05.webp',
         title: "Marvel's Avengers",
-        text: "Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.",
+        text: "Marvel's Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.",
     }
 ];
 
-const carouselContainerDocument = document.querySelector('.carousel-container');
+// const carouselContainerDocument = document.querySelector('.carousel-container');
 
-carouselContainerDocument.innerHTML = `
-    <!-- Button left  -->
-    <button type="button" class="btn btn-light my_button-left"><i class="fa-solid fa-chevron-left"></i></button>    
+// carouselContainerDocument.innerHTML = `
+//     <!-- Button left  -->
+//     <button type="button" class="btn btn-light my_button-left"><i class="fa-solid fa-chevron-left"></i></button>    
 
-    <!-- Button right  -->
-    <button type="button" class="btn btn-light my_button-right"><i class="fa-solid fa-chevron-right"></i></button>  
-`;
+//     <!-- Button right  -->
+//     <button type="button" class="btn btn-light my_button-right"><i class="fa-solid fa-chevron-right"></i></button>  
+// `;
 
-images.forEach((element, index) => {
-    carouselContainerDocument.innerHTML += `
-    <!-- Carousel imgs  -->
-    <img id="my-carousel-img-${index + 1}" class="carousel-img" src="${element.image}" alt="">
-    `;
-})
+// images.forEach((element, index) => {
+//     carouselContainerDocument.innerHTML += `
+//     <!-- Carousel imgs  -->
+//     <img id="my-carousel-img-${index + 1}" class="carousel-img" src="${element.image}" alt="">
+//     `;
+// })
 
-const carouselImgsDocument = document.getElementById('my-carousel-img-1');
-carouselImgsDocument.classList.add('active');
+// const carouselImgsDocument = document.getElementById('my-carousel-img-1');
+// carouselImgsDocument.classList.add('active');
 
-const rightCarouselButton = document.querySelector('.my_button-right');
-const leftCarouselButton = document.querySelector('.my_button-left');
+// const rightCarouselButton = document.querySelector('.my_button-right');
+// const leftCarouselButton = document.querySelector('.my_button-left');
 
-rightCarouselButton.addEventListener('click', function () {
-    alert('ciao destro');
-})
+// rightCarouselButton.addEventListener('click', function () {
+//     alert('ciao destro');
+// })
 
-leftCarouselButton.addEventListener('click', function () {
-    alert('ciao sinistro');
-})
+// leftCarouselButton.addEventListener('click', function () {
+//     alert('ciao sinistro');
+// })
