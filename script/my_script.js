@@ -6,9 +6,6 @@ console.log('hello');
 // descrizione
 // Creare un carosello come nella foto allegata.
 
-//! BONUS 1:
-// Aggiungere le thumbnails (sottoforma di miniatura) ed al click attivare l’immagine corrispondente.
-
 //! BONUS 2:
 // Aggiungere funzionalità di autoplay: dopo un certo periodo di tempo (3 secondi) l’immagine attiva dovrà cambiare alla successiva.
 
@@ -140,3 +137,21 @@ function swithcElementInCarousel(elementClass, miniatureClass, activeClass, colo
     document.querySelectorAll(`.${miniatureClass}`)[Index].classList.add(colorClass)
 
 }
+
+setInterval(myTimer, 3000);
+
+function myTimer() {
+    if (activeIndex === images.length - 1) {
+        activeIndex = 0;
+    } else {
+        activeIndex = activeIndex + 1;
+    }
+    // alert('ciao destro');
+    swithcElementInCarousel('carouselmodule', 'miniaturebox', 'active', 'color', activeIndex)
+    // const d = new Date();
+    // console.log(d.toLocaleTimeString());
+}
+
+// function myTimer() {
+//     swithcElementInCarousel('carouselmodule', 'miniaturebox', 'active', 'color', activeIndex);
+// } 
