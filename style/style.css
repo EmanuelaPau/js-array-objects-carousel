@@ -7,8 +7,6 @@ main {
 div.page-wrapper {
     width: 1200px;
     margin: 0 auto;
-
-
 }
 
 div.carousel-container {
@@ -20,6 +18,8 @@ div.carousel-container {
 }
 
 .carousel-module {
+    position: absolute;
+
     width: 100%;
     height: 100%;
 }
@@ -41,6 +41,7 @@ button.my_button-left {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 1;
 }
 
 button.my_button-right {
@@ -56,6 +57,7 @@ button.my_button-right {
     top: 50%;
     right: 0;
     transform: translateY(-50%);
+    z-index: 1;
 }
 
 .my_image-infos-container {
@@ -78,14 +80,13 @@ button.my_button-right {
 }
 
 .carousel-img {
-    position: absolute;
-
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
     /* margin-bottom: 20px; */
     display: none;
+    z-index: 0;
 }
 
 .active {
