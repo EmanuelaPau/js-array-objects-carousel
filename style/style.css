@@ -113,8 +113,8 @@ button.my_button-right {
 
 .miniature-box {
     height: 100%;
-    width: calc(100% / 5 - 20px);
-    filter: grayscale(70%);
+    width: calc(100% / 5 - 10px);
+    filter: grayscale(80%) blur(1px);
     /* background-color: blue; */
 }
 
@@ -127,5 +127,5 @@ button.my_button-right {
 }
 
 .color {
-    filter: grayscale(0);
+    filter: grayscale(0) blur(0);
 }

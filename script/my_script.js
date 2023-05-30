@@ -90,6 +90,8 @@ images.forEach((element, index) => {
 
 const carouselImgsContainerDocument = document.querySelectorAll('.carousel-module')[activeIndex].classList.add('active');
 
+document.querySelectorAll('.miniature-box')[activeIndex].classList.add('color');
+
 const rightCarouselButton = document.querySelector('.my_button-right');
 const leftCarouselButton = document.querySelector('.my_button-left');
 
@@ -102,6 +104,9 @@ rightCarouselButton.addEventListener('click', function () {
     // alert('ciao destro');
     document.querySelector('.carousel-module.active').classList.remove('active');
     document.querySelectorAll('.carousel-module')[activeIndex].classList.add('active')
+
+    document.querySelector('.miniature-box.color').classList.remove('color');
+    document.querySelectorAll('.miniature-box')[activeIndex].classList.add('color')
 })
 
 leftCarouselButton.addEventListener('click', function () {
@@ -113,6 +118,9 @@ leftCarouselButton.addEventListener('click', function () {
     // alert('ciao sinistro');
     document.querySelector('.carousel-module.active').classList.remove('active');
     document.querySelectorAll('.carousel-module')[activeIndex].classList.add('active')
+
+    document.querySelector('.miniature-box.color').classList.remove('color');
+    document.querySelectorAll('.miniature-box')[activeIndex].classList.add('color')
 })
 
 // function swithcElementInCarousel(elementClass Index) {
