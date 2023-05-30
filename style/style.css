@@ -115,6 +115,7 @@ button.my_button-right {
     height: 100%;
     width: calc(100% / 5 - 10px);
     filter: grayscale(80%) blur(1px);
+    cursor: pointer;
     /* background-color: blue; */
 }
 

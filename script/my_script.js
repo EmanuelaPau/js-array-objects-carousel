@@ -123,7 +123,32 @@ leftCarouselButton.addEventListener('click', function () {
     document.querySelectorAll('.miniature-box')[activeIndex].classList.add('color')
 })
 
-// function swithcElementInCarousel(elementClass Index) {
-//     const carouselImgsDocument = document.getElementById(`my-carousel-img-${imageIndex}`);
+
+const miniature = document.querySelectorAll('.miniature-box');
+
+changeImageByMiniature(2);
+
+function changeImageByMiniature(index) {
+    miniature[index].addEventListener('click', function () {
+        // alert('ciao');
+        activeIndex = index;
+        document.querySelector('.carousel-module.active').classList.remove('active');
+        document.querySelectorAll('.carousel-module')[activeIndex].classList.add('active')
+
+        document.querySelector('.miniature-box.color').classList.remove('color');
+        document.querySelectorAll('.miniature-box')[activeIndex].classList.add('color')
+    })
+}
+
+
+
+
+
+// function swithcElementInCarousel(elementClass, miniatureClass, activeClass, colorClass, Index) {
+//     document.querySelector(`${elementClass}${activeClass}`).classList.remove(`${activeClass}`);
+//     document.querySelectorAll('.')[Index].classList.add(`${activeClass}`)
+
+//     document.querySelector(`${miniatureClass}${colorClass}`).classList.remove(`${colorClass}`);
+//     document.querySelectorAll(`${miniatureClass}`)[Index].classList.add(`${colorClass}`)
 
 // }
