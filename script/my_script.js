@@ -60,15 +60,14 @@ const images = [
 const carouselContainerDocument = document.querySelector('.carousel-container');
 console.log(carouselContainerDocument);
 
-images.forEach((image) => {
-    carouselContainerDocument.innerHTML = `
-    <!-- Carousel imgs  -->
-    <img class="carousel-img active" src="img/01.webp" alt="">
-
+carouselContainerDocument.innerHTML = `
     <!-- Button left  -->
     <button type="button" class="btn btn-light my_button-left"><i class="fa-solid fa-chevron-left"></i></button>    
 
     <!-- Button right  -->
     <button type="button" class="btn btn-light my_button-right"><i class="fa-solid fa-chevron-right"></i></button>  
-    `
+`;
+
+images.forEach((element) => {
+
 })
