@@ -70,7 +70,7 @@ images.forEach((element, index) => {
     carouselContainerDocument.innerHTML += `
     <!-- Text info   -->
     <div class="carousel-module">
-        <div class="my_image-infos-container">
+        <div class="my_image-infos-container" id="my_carousel-info-${index + 1}">
             <h2 class="my_image-title" id="my_carousel-title-${index + 1}">
                 ${element.title}
             </h2>
@@ -87,6 +87,9 @@ images.forEach((element, index) => {
 
 const carouselImgsDocument = document.getElementById('my-carousel-img-1');
 carouselImgsDocument.classList.add('active');
+
+const carouselTextBoxDocument = document.getElementById('my_carousel-info-1');
+carouselTextBoxDocument.classList.add('active');
 
 const rightCarouselButton = document.querySelector('.my_button-right');
 const leftCarouselButton = document.querySelector('.my_button-left');
