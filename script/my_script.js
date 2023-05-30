@@ -102,11 +102,7 @@ rightCarouselButton.addEventListener('click', function () {
         activeIndex = activeIndex + 1;
     }
     // alert('ciao destro');
-    document.querySelector('.carouselmodule.active').classList.remove('active');
-    document.querySelectorAll('.carouselmodule')[activeIndex].classList.add('active')
-
-    document.querySelector('.miniaturebox.color').classList.remove('color');
-    document.querySelectorAll('.miniaturebox')[activeIndex].classList.add('color')
+    swithcElementInCarousel('carouselmodule', 'miniaturebox', 'active', 'color', activeIndex)
 })
 
 leftCarouselButton.addEventListener('click', function () {
@@ -116,11 +112,7 @@ leftCarouselButton.addEventListener('click', function () {
         activeIndex = activeIndex - 1;
     }
     // alert('ciao sinistro');
-    document.querySelector('.carouselmodule.active').classList.remove('active');
-    document.querySelectorAll('.carouselmodule')[activeIndex].classList.add('active')
-
-    document.querySelector('.miniaturebox.color').classList.remove('color');
-    document.querySelectorAll('.miniaturebox')[activeIndex].classList.add('color')
+    swithcElementInCarousel('carouselmodule', 'miniaturebox', 'active', 'color', activeIndex)
 })
 
 
