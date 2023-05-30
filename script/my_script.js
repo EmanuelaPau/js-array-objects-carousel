@@ -126,7 +126,9 @@ leftCarouselButton.addEventListener('click', function () {
 
 const miniature = document.querySelectorAll('.miniature-box');
 
-changeImageByMiniature(2);
+images.forEach((element, i) => {
+    changeImageByMiniature(i)
+})
 
 function changeImageByMiniature(index) {
     miniature[index].addEventListener('click', function () {
