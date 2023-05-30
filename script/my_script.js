@@ -66,6 +66,8 @@ carouselContainerDocument.innerHTML = `
     <button type="button" class="btn btn-light my_button-right"><i class="fa-solid fa-chevron-right"></i></button>  
 `;
 
+let activeIndex = images.length;
+
 images.forEach((element, index) => {
     carouselContainerDocument.innerHTML += `
     <!-- Text info   -->
@@ -85,26 +87,27 @@ images.forEach((element, index) => {
     `;
 })
 
-const carouselImgsDocument = document.querySelectorAll('.carousel-img')[0].classList.add('active');
+const carouselImgsDocument = document.querySelectorAll('.carousel-img')[activeIndex - 1].classList.add('active');
 
-const carouselTextBoxDocument = document.querySelectorAll('.my_image-infos-container')[0].classList.add('active');
-
-let activeIndex = 0;
+const carouselTextBoxDocument = document.querySelectorAll('.my_image-infos-container')[activeIndex - 1].classList.add('active');
 
 const rightCarouselButton = document.querySelector('.my_button-right');
 const leftCarouselButton = document.querySelector('.my_button-left');
 
 rightCarouselButton.addEventListener('click', function () {
     // alert('ciao destro');
+    document.querySelector('.carousel-img.active').classList.remove('active');
 
 })
 
 leftCarouselButton.addEventListener('click', function () {
+    activeIndex = activeIndex - 1;
     // alert('ciao sinistro');
-    document.querySelector('.carousel-img.active').classList.remove('active')
+    document.querySelector('.carousel-img.active').classList.remove('active');
+    document.querySelectorAll('.carousel-img')[activeIndex].classList.add('active')
 })
 
-// function swithcImageLeft(imageIndex) {
+// function swithcImageLeft(imageIndex) {   
 //     // const carouselImgsDocument = document.getElementById(`my-carousel-img-${imageIndex}`);
     
 // }
