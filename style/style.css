@@ -11,7 +11,6 @@ div.page-wrapper {
 
 div.carousel-container {
     margin: 0 auto;
-    /* background-color: brown; */
     width: 90%;
     height: 600px;
     position: relative;
@@ -67,29 +66,25 @@ button.my_button-stop,
 button.my_button-play,
 button.my_button-reverse {
     top: 20px;
+    transform: translateX(50%);
 }
 
 button.my_button-stop {
     right: 60%;
-    transform: translateX(-50%);
 }
 
 button.my_button-play {
     right: 50%;
-    transform: translateX(-50%);
 }
 
 button.my_button-reverse {
     right: 40%;
-    transform: translateX(-50%);
 }
 
 .my_image-infos-container {
     padding: 20px;
     position: absolute;
-    /* left: 20px; */
     bottom: 0;
-    /* display: none; */
     z-index: 2;
 }
 
@@ -109,8 +104,6 @@ button.my_button-reverse {
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
-    /* margin-bottom: 20px; */
-    /* display: none; */
     z-index: 0;
 }
 
@@ -131,7 +124,6 @@ button.my_button-reverse {
     margin: 10px auto 0;
     width: 90%;
     height: 120px;
-    /* background-color: red; */
 }
 
 .miniaturebox {
@@ -139,7 +131,6 @@ button.my_button-reverse {
     width: calc(100% / 5 - 10px);
     filter: grayscale(80%) blur(1px);
     cursor: pointer;
-    /* background-color: blue; */
 }
 
 .miniaturebox img {
