@@ -1,18 +1,5 @@
 console.log('hello');
 
-//! BONUS 3:
-// Aggiungere bottoni di start/stop e di inversione del meccanismo di autoplay.
-
-//? CAROUSEL ELEMENTS 
-// <!-- Carousel imgs  -->
-// <img class="carousel-img" src="img/01.webp" alt="">
-
-// <!-- Button left  -->
-// <button type="button" class="btn btn-light my_button-left"><i class="fa-solid fa-chevron-left"></i></button>    
-
-// <!-- Button right  -->
-// <button type="button" class="btn btn-light my_button-right"><i class="fa-solid fa-chevron-right"></i></button>   
-
 const images = [
     {
         image: 'img/01.webp',
@@ -114,11 +101,16 @@ leftCarouselButton.addEventListener('click', function () {
 const miniature = document.querySelectorAll('.miniaturebox');
 
 images.forEach((element, i) => {
-    changeImageByMiniature(i)
+    changeImageByMiniature(miniature, i)
 })
 
-function changeImageByMiniature(index) {
-    miniature[index].addEventListener('click', function () {
+/**
+ * A function that change an image from it's miniature
+ * @param {*} index 
+ */
+
+function changeImageByMiniature(miniatureElement, index) {
+    miniatureElement[index].addEventListener('click', function () {
         // alert('ciao');
         activeIndex = index;
 
@@ -136,6 +128,7 @@ function swithcElementInCarousel(elementClass, miniatureClass, activeClass, colo
 
 }
 
+// Add infinite automatic image scrolling 
 let isTimerOn = true;
 
 setInterval(myTimer, 3000);
@@ -151,6 +144,7 @@ function myTimer() {
     }
 }
 
+// Add play and pause button 
 const playButton = document.querySelector('.my_button-play');
 const pauseButton = document.querySelector('.my_button-stop');
 
