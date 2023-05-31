@@ -30,9 +30,12 @@ div.carousel-container {
     font-weight: 700;
 }
 
-button.my_button-left {
+button.my_button-left,
+button.my_button-right,
+button.my_button-stop,
+button.my_button-play,
+button.my_button-reverse {
     border-radius: 50%;
-    margin-left: 20px;
     background-color: rgba(255, 255, 255, 0.198);
     border: none;
     width: 50px;
@@ -40,76 +43,45 @@ button.my_button-left {
     font-size: 1.5rem;
     color: rgb(52, 52, 52);
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+
     z-index: 2;
+}
+
+button.my_button-left,
+button.my_button-right {
+    top: 50%;
+}
+
+button.my_button-left {
+    transform: translateY(-50%);
+    margin-left: 20px;
 }
 
 button.my_button-right {
-    border-radius: 50%;
     margin-right: 20px;
-    background-color: rgba(255, 255, 255, 0.198);
-    border: none;
-    width: 50px;
-    height: 50px;
-    font-size: 1.5rem;
-    color: rgb(52, 52, 52);
-    position: absolute;
-    top: 50%;
     right: 0;
     transform: translateY(-50%);
-    z-index: 2;
+}
+
+button.my_button-stop,
+button.my_button-play,
+button.my_button-reverse {
+    top: 20px;
 }
 
 button.my_button-stop {
-    border-radius: 50%;
-    margin-right: 20px;
-    background-color: rgba(255, 255, 255, 0.198);
-    border: none;
-    width: 50px;
-    height: 50px;
-    font-size: 1.5rem;
-    color: rgb(52, 52, 52);
-    position: absolute;
-
-    top: 20px;
     right: 60%;
     transform: translateX(-50%);
-    z-index: 2;
 }
 
 button.my_button-play {
-    border-radius: 50%;
-    margin-right: 20px;
-    background-color: rgba(255, 255, 255, 0.198);
-    border: none;
-    width: 50px;
-    height: 50px;
-    font-size: 1.5rem;
-    color: rgb(52, 52, 52);
-    position: absolute;
-
-    top: 20px;
     right: 50%;
     transform: translateX(-50%);
-    z-index: 2;
 }
 
 button.my_button-reverse {
-    border-radius: 50%;
-    margin-right: 20px;
-    background-color: rgba(255, 255, 255, 0.198);
-    border: none;
-    width: 50px;
-    height: 50px;
-    font-size: 1.5rem;
-    color: rgb(52, 52, 52);
-    position: absolute;
-
-    top: 20px;
     right: 40%;
     transform: translateX(-50%);
-    z-index: 2;
 }
 
 .my_image-infos-container {
