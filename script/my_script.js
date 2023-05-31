@@ -36,7 +36,9 @@ carouselContainerDocument.innerHTML = `
     <button type="button" class="btn btn-light my_button-play"><i class="fa-solid fa-play"></i></button> 
     
     <!-- Button stop -->
-    <button type="button" class="btn btn-light my_button-stop"><i class="fa-solid fa-pause"></i></button>   
+    <button type="button" class="btn btn-light my_button-stop"><i class="fa-solid fa-pause"></i></button>  
+    
+    <button type="button" class="btn btn-light my_button-reverse"><i class="fa-solid fa-backward"></i></button>  
 
     <!-- Button left  -->
     <button type="button" class="btn btn-light my_button-left"><i class="fa-solid fa-chevron-left"></i></button>    
@@ -45,7 +47,7 @@ carouselContainerDocument.innerHTML = `
     <button type="button" class="btn btn-light my_button-right"><i class="fa-solid fa-chevron-right"></i></button>  
 `;
 
-
+// Active index is the index indicating witch image is selected 
 let activeIndex = 0;
 
 // Add images elements in the container
@@ -148,16 +150,31 @@ function switchElementInCarousel(elementClass, miniatureClass, activeClass, colo
 // Add infinite automatic image scrolling 
 let isTimerOn = true;
 
+let isAutoplayForward = true;
+
 setInterval(myTimer, 3000);
+
+// setInterval(() => { rightCarouselButton.click(); }, 3000);
 
 function myTimer() {
     if (isTimerOn) {
-        if (activeIndex === images.length - 1) {
-            activeIndex = 0;
-        } else {
-            activeIndex = activeIndex + 1;
+        if (isAutoplayForward) {
+            if (activeIndex === images.length - 1) {
+                activeIndex = 0;
+            } else {
+                activeIndex = activeIndex + 1;
+            }
+            switchElementInCarousel('carouselmodule', 'miniaturebox', 'active', 'color', activeIndex)
         }
-        switchElementInCarousel('carouselmodule', 'miniaturebox', 'active', 'color', activeIndex)
+        else {
+            if (activeIndex === 0) {
+                activeIndex = images.length - 1;
+            } else {
+                activeIndex = activeIndex - 1;
+            }
+            // alert('ciao sinistro');
+            switchElementInCarousel('carouselmodule', 'miniaturebox', 'active', 'color', activeIndex)
+        }
     }
 }
 
@@ -167,8 +184,15 @@ const pauseButton = document.querySelector('.my_button-stop');
 
 playButton.addEventListener('click', function () {
     isTimerOn = true;
+    isAutoplayForward = true;
 })
 
 pauseButton.addEventListener('click', function () {
     isTimerOn = false;
+})
+
+const reverseButton = document.querySelector('.my_button-reverse');
+
+reverseButton.addEventListener('click', function () {
+    isAutoplayForward = false;
 })
