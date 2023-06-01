@@ -2,7 +2,7 @@
 A carousel built in vanilla JS <br><br>
 <img src="img/Screen.png" width="800px">
 
-<h2><strong>HOW IT WORKD:</strong></h2>
+<h2><strong>HOW IT WORKS:</strong></h2>
 This carousel takes it's infos (img urls,img titles, img descriptions) from an Array of Ojects and it traduces them in a functioning carousel<br>
 
 The carousel's cards automatically go forward every 3 seconds, but the user can choose to stop the automatic scroll with the pause button and make it start again with the play button. The user can also decide to invert the direction of the automatic scroll by pressing the reverse button. 
